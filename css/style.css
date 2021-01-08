@@ -1,0 +1,100 @@
+body {
+    margin: 0px;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+#content {
+    margin: auto;
+    width: 950px;
+    height: auto;
+}
+
+#header {
+    border-top: 5px solid #81b300;
+}
+
+#wave {
+    margin-top: 0%;
+    height: 97%;
+    width: 100%;
+    position: absolute;
+    background: url(images/wave.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1031;
+}
+
+.nav-item {
+    z-index: 1032;
+}
+
+button {
+    z-index: 1032;
+    float: right;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    margin-top: 2%;
+    height: 200px;
+    width: auto;
+}
+
+.card-body a {
+    margin-left: 30%;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.jumbotron {
+    background-color: #f2f2f2;
+    margin-top: 2%;
+}
+
+.imgFb {
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.mini {
+    width: 5px;
+    height: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+#edito {
+    text-align: justify;
+}
+
+
+/*
+.btn-primary{
+  background-color: #DBEC5E!important;
+  border-color: #DBEC5E!important;
+}
+*/
+
+#sidebarMenu {
+    padding-top: 100px!important;
+    margin-top: 50px!important;
+}
