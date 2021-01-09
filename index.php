@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 
 try {
-	$bdd = new PDO('mysql:host=localhost;dbname=creaweb','root','');
+	$bdd = new PDO('mysql:host=localhost;dbname=creaweb','root','root');
 	//$bdd = new PDO('mysql:host=localhost:3307;dbname=cdf','root','CaenNormandie14');
 } catch (PDOException $e) {
     echo 'Échec de la connexion : ' . $e->getMessage();
@@ -33,4 +33,5 @@ if(!empty($_GET['page']) AND is_file('controllers/'.$_GET['page'].'.php')){ //is
 
 ?>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel='stylesheet' type='text/css' href='css/style.php' />
 
