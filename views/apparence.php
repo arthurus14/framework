@@ -10,7 +10,21 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" type="text/css" href="../css/bootsrap.min.css"> -->
 
+<!-- 
 
+choisir le slogan du site
+favicon
+couleur footer
+font-family
+couleur du texte
+
+loader pour mise à jour
+page de contact
+
+créer le header (animation avec image et contact) et le footer (map et coordonnées) en include
+
+statistique de vu sur les articles et les pages
+-->
 
   <title>Apparence</title>
 </head>
@@ -33,41 +47,57 @@
   }
 
   ?>
-
+<body>
   <div class="container">
-
-    
-
-   
-   
 
     <h1 id="gestion">Espace de gestion de l'apparence du site</h1><br/>
 
-    <div class="container-fluid">
 
+<div class="container">
+  <div class="row">
+  
+    <form action="" method="POST" class="col">
 
-    <form action="" method="POST">
-
-    <div class="form-group">
-  <div class="col-6">
-    <input class="form-control" type="text" name="websiteName" placeholder="Nom du site" id="example-text-input">
-  </div>
+<div class="form-group">
+<div class="col-6">
+<input class="form-control" type="text" name="websiteName" placeholder="Nom du site" id="example-text-input">
+</div>
 </div>
 
 <div class="form-group">
-  <label for="example-color-input" class="col-12 col-form-label">Couleur de fond</label>
-  <div class="col-6">
-    <input class="form-control" type="color" name="bgColor" value="#563d7c" id="example-color-input">
-  </div>
+<label for="example-color-input" class="col-12 col-form-label">Couleur de fond</label>
+<div class="col-6">
+<input class="form-control" type="color" name="bgColor" value="#563d7c" id="example-color-input">
+</div>
 </div>
 
 <div class="form-group">
-      <div class="col-6">
-        <button type="submit" class="btn btn-primary">Enregistrer</button>
-      </div>
-    </div>
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </div>
+</div>
 </form>
-	
+
+
+
+<form action="" method="POST" class="col" enctype="multipart/form-data">
+
+
+<div class="form-group" >
+<div class="col-6">
+<label >Logo du site</label>
+<input type="file" class="form-control-file" name="logo" >
+</div>
+</div>
+
+
+<div class="form-group">
+<div class="col-6">
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+</div>
+</div>
+</form>
+
 <?php 
                    if(!empty($serveur) && $serveur ===200){
                     echo"</br></br>";
@@ -80,10 +110,29 @@
                    }
                         
             ?>
+    </div>
+    <div class="col">
+        <h1><?php //include("admin.php");  ?></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col">
+      2 of 3
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</div>
   
 </div>
 
 
+
+</body>
     <!--autres cards -->
 
     <!-- Footer -->
