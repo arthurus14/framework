@@ -27,3 +27,8 @@ h1{
 #include{
     background-color: red;
 }
+.footer{
+    background-color:white;
+    margin-top:10%;
+}
+#mapid { height: 280px; }

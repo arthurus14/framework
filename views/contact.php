@@ -52,7 +52,7 @@
             ?>
 </div> 
 
-
+<?php include('controllers/footer.php'); ?>
  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
