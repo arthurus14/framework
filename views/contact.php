@@ -13,18 +13,24 @@
 
 
   <title>Contact</title>
+ 
 </head>
 
 <body>
   
   <div class="container">
-
-    <h1>Contact</h1>    
+    <div class="">
+      <?php include('controllers/menu.php'); ?>
+    </div>
 
    
 <div class="row">
 
-    <form action="" method="POST" class="col-6">
+
+    <form action="" method="POST" class="col-6" id="formulaire">
+      <div class="form-group">
+         <h1>Contact</h1>
+      </div> 
   <div class="form-group">
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail" placeholder="Enter email">
   </div>
@@ -52,7 +58,7 @@
             ?>
 </div> 
 
-<?php include('controllers/footer.php'); ?>
+<?php include_once('controllers/footer.php'); ?>
  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

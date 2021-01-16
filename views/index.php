@@ -15,35 +15,11 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
 
-    <!-- Static navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <ul><img class="imgFb" src="images/cdf.jpg" alt="logo cdf">mon entreprise</ul>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#avant">produits</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#venir">réalisations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        <button type="button" id="admin" class="btn btn-success" data-toggle="modal" data-target="#adminLogin">Mon espace</button>
-      </span>
-    </div>
+ <?php include('controllers/menu.php'); ?>
 
-  </nav>
-
-    <div class="jumbotron">
+    <div class="jumbotron-fluid">
 <!-- image de présentation  -->
       <img src="images/Saint-aubin-sur-mer-calvados.jpg" class="img-fluid" alt="Responsive image">
      
@@ -53,7 +29,7 @@
 
 
 <!-- affiche les articles  -->
-<div class="row" id="pastEvents">
+<div class="row mt-3" id="pastEvents">
   <?php foreach ($article as $n) { ?>
 
   <div class="col-sm-4">
@@ -75,66 +51,8 @@
 
 <!--autres cards -->
 <br />
-    <!-- Footer -->
-    <footer id="contact" class="page-footer font-small blue pt-4">
-
-      <!-- Footer Links -->
-      <div class="container-fluid text-center text-md-left">
-
-        <!-- Grid row -->
-        <div class="row">
-
-          <!-- Grid column -->
-          <div class="col-md-6 mt-md-0 mt-3">
-
-            <!-- footer-->
-            <h5 class="text-uppercase">mon entreprise</h5>
-            <p>forme juridique</p>
-
-          </div>
-          <!-- Grid column -->
-
-          <hr class="clearfix w-100 d-md-none pb-3">
-
-          <!-- réseaux sociaux -->
-          <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">contact</h5>
-            <?php foreach ($coords as $n) {
-              ?>
-            <a href="<?php echo $n['fb']?>" target="_blank"><img class="imgFb" src="images/fb.png" alt="logo facebook"></a>
-
-
-            <a href="mailto:<?php echo $n['mail']?>?Subject=Contact" target="_top"><img class="imgFb" src="images/mail.png" alt="logo mail"></a>
-
-          </div>
-          <!-- Grid column -->
-
-          <!-- coordonnées-->
-          <div class="col-md-3 mb-md-0 mb-3">
-          <h5 class="text-uppercase">mon entreprise</h5>
-            <address>
-
-                <?php echo $n['numero']?>
-                <?php echo $n['rue']."<br>"?>
-                <?php echo $n['cp']."<br>"?>
-                <?php echo $n['ville']."<br>"?>
-                <?php echo "Tél: ".$n['tel']."<br>"?>
-                <?php echo "Mail: ".$n['mail']."<br>"?>
-                <?php
-              }
-              ?>
-            </address>
-
-
-
-          </div>
-          <!-- Grid column -->
-
-        </div>
-        <!-- Grid row -->
-
-      </div>
-    </footer>
+    
+<?php include('controllers/footer.php'); ?>
 
     <!-- modal espace connexion -->
     <div class="modal fade" id="adminLogin" tabindex="-1" role="dialog" aria-labelledby="adminLogin" aria-hidden="true">

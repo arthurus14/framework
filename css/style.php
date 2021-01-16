@@ -31,4 +31,10 @@ h1{
     background-color:white;
     margin-top:10%;
 }
-#mapid { height: 280px; }
+#mapid{ 
+    height: 280px; 
+}
+#formulaire{
+    margin-top:12%;
+    margin-left:25%;
+}

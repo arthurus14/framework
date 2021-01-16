@@ -5,7 +5,7 @@ include('models/admin.php');
 include('models/users.php');
 $article = afficher_articles();
 $soon = afficher_articles_a_venir();
-$coords = ReadCoords();
+//$coords = ReadCoords();
 //afficher article par id
 if(isset($_GET['article'])){
 $arti = articles($_GET['article']);

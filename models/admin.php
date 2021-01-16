@@ -81,19 +81,7 @@ function convertImage($source,$dst,$width,$height,$quality){
 //fin image resize
 
 
-function ReadCoords(){
-  global $bdd; //connection bdd depuis les codes d'une autre page
 
-	$user = array();
-
-	$req = $bdd->query('SELECT * FROM coords');
-
-	while($data = $req->fetch())
-	{
-		$coords[] = $data;
-	}
-	return $coords;
-}
 function ReadArticles(){
   global $bdd; //connection bdd depuis les codes d'une autre page
 
