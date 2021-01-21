@@ -33,10 +33,17 @@
         <div class="row">
                 <div class="col-sm-6">
                     <h3 class="text-center">Rédiger un article</h3>
-                    <form  action="" method="POST">
+                    <form  action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Titre</label>
                             <input type="text" class="form-control" name="titre"  placeholder="titre">
+                        </div>
+
+                        <div class="form-group" >
+                            <div class="col-6">
+                            <label >Image</label>
+                            <input type="file" class="form-control-file" name="imageArticle" >
+                            </div>
                         </div>
                         
                         <div class="form-group">
