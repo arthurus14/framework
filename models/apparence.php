@@ -1,10 +1,21 @@
 <?php
 
-function apparence($titre,$bgColor){
+function apparence($titre,$bgColor,$headerColor,$footerColor){
 
     global $bdd;
-	$comments = $bdd->prepare('INSERT INTO apparence(titreSite,bgColor) VALUES(?,?)');
-	$affectedLines = $comments->execute(array($titre,$bgColor));
+	$comments = $bdd->prepare('INSERT INTO apparence(titreSite,bgColor,headerColor,footerColor) VALUES(?,?,?,?)');
+	$affectedLines = $comments->execute(array($titre,$bgColor,$headerColor,$footerColor));
+
+	global $serveur;
+	$serveur = http_response_code();;
+	return $serveur;
+}
+
+function apparencePolice($h1Color,$h1Police,$h2Color,$H2Police){
+
+    global $bdd;
+	$comments = $bdd->prepare('INSERT INTO apparence(h1Color,h1Police,h2Color,h2Police) VALUES(?,?,?,?)');
+	$affectedLines = $comments->execute(array($h1Color,$h1Police,$h2Color,$H2Police));
 
 	global $serveur;
 	$serveur = http_response_code();;

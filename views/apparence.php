@@ -11,14 +11,6 @@
   <!-- <link rel="stylesheet" type="text/css" href="../css/bootsrap.min.css"> -->
 
 <!-- 
-
-choisir le slogan du site
-favicon
-couleur footer
-font-family
-couleur du texte
-
-loader pour mise à jour
 page de contact
 
 créer le header (animation avec image et contact) et le footer (map et coordonnées) en include
@@ -28,7 +20,7 @@ statistique de vu sur les articles et les pages
 
   <title>Apparence</title>
 </head>
-
+<script type="text/javascript" src="./js/scripts.js"></script>
 <body>
   <?php
 
@@ -47,16 +39,64 @@ statistique de vu sur les articles et les pages
   }
 
   ?>
+
+<style type="text/css">
+
+#sidebarMenu{
+  margin-top: 60px;
+}
+#menu{
+  color:black;
+}
+a{
+  color:black!important;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>toggle();</script>
+
 <body>
-  <div class="container">
+
+
+
 
     <h1 id="gestion">Espace de gestion de l'apparence du site</h1><br/>
 
 
-<div class="container">
+<div class="container" class="row">
+<div id="sidebarMenu">
   <div class="row">
-  
-    <form action="" method="POST" class="col">
+    <nav  class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+          <button id="clicNomSite">Nom du site</button>
+          </li>
+         
+          <li class="nav-item">
+          <button id="clicLogo">Logo du site</button>
+          </li> 
+          
+          <li class="nav-item">
+          <button id="clicJumbo">Jumbotron</button>
+          </li> 
+
+          <li class="nav-item">
+          <button id="clicCharactere">Police de charactères</button>
+          </li> 
+        </ul>
+
+       
+      </div>
+    </nav>
+
+  <div>
+  <div class="row">
+ 
+    <form id="nomDuSite" action="" method="POST" class="col">
 
 <div class="form-group">
 <div class="col-6">
@@ -65,9 +105,23 @@ statistique de vu sur les articles et les pages
 </div>
 
 <div class="form-group">
-<label for="example-color-input" class="col-12 col-form-label">Couleur de fond</label>
+<label for="example-color-input" class="col-12 col-form-label">Couleur de fond en tête</label>
+<div class="col-6">
+<input class="form-control" type="color" name="headerColor" value="#563d7c" id="example-color-input">
+</div>
+</div>
+
+<div class="form-group">
+<label for="example-color-input" class="col-12 col-form-label">Couleur de fond body</label>
 <div class="col-6">
 <input class="form-control" type="color" name="bgColor" value="#563d7c" id="example-color-input">
+</div>
+</div>
+
+<div class="form-group">
+<label for="example-color-input" class="col-12 col-form-label">Couleur de fond pied de page</label>
+<div class="col-6">
+<input class="form-control" type="color" name="footerColor" value="#563d7c" id="example-color-input">
 </div>
 </div>
 
@@ -80,13 +134,32 @@ statistique de vu sur les articles et les pages
 
 
 
-<form action="" method="POST" class="col" enctype="multipart/form-data">
+<form id="logoSite" action="" method="POST" class="col" enctype="multipart/form-data">
 
 
 <div class="form-group" >
 <div class="col-6">
 <label >Logo du site</label>
 <input type="file" class="form-control-file" name="logo" >
+</div>
+</div>
+
+
+<div class="form-group">
+<div class="col-6">
+<button type="submit" class="btn btn-primary">Enregistrer</button>
+</div>
+</div>
+</form>
+
+
+<form id="jumboSite" action="" method="POST" class="col" enctype="multipart/form-data">
+
+
+<div class="form-group" >
+<div class="col-6">
+<label >Jumbotron</label>
+<input type="file" class="form-control-file" name="jumbo" >
 </div>
 </div>
 
@@ -117,7 +190,58 @@ statistique de vu sur les articles et les pages
   </div>
   <div class="row">
     <div class="col">
-      1 of 3
+    
+    <form id="charactere" action="" method="POST" class="col">
+
+
+<div class="form-group">
+<label for="example-color-input" class="col-12 col-form-label">Couleur H1</label>
+<div class="col-6">
+<input class="form-control" type="color" name="h1Color" value="#563d7c" id="example-color-input">
+</div>
+</div>
+
+<div class="form-group">
+<label for="example-color-input" class="col-12 col-form-label">Police H1</label>
+<div class="col-6">
+<select class="form-select" name="h1Police" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+</div>
+
+
+
+<div class="form-group">
+<label for="example-color-input" class="col-12 col-form-label">Couleur H2</label>
+<div class="col-6">
+<input class="form-control" type="color" name="h2Color" value="#563d7c" id="example-color-input">
+</div>
+</div>
+
+<div class="form-group">
+<label for="example-color-input" class="col-12 col-form-label">Police H2</label>
+<div class="col-6">
+<select class="form-select" name="h2Police" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+</div>
+</div>
+
+
+
+<div class="form-group">
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+  </div>
+</div>
+</form>
     </div>
     <div class="col">
       2 of 3
@@ -147,9 +271,7 @@ statistique de vu sur les articles et les pages
 
     </footer>
 
-   
-  
- 
+    
 
   </div> <!-- /container -->
 
@@ -170,6 +292,8 @@ statistique de vu sur les articles et les pages
 
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
+
+
 
 
 
