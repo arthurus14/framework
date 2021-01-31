@@ -23,18 +23,18 @@ function apparencePolice($h1Color,$h1Police,$h2Color,$h2Police){
 }
 
 
-function upload($logo){
+function upload($logo,$dossier,$phpMyAdmin){
 	global $bdd;
 	
-	$comments = $bdd->prepare('INSERT INTO logo(nom) VALUES(?)');
-	$affectedLines = $comments->execute(array('logo/'.$logo));
+	$comments = $bdd->prepare('INSERT INTO`'.$phpMyAdmin.'`(nom) VALUES(?)');
+	$affectedLines = $comments->execute(array($dossier.'/'.$logo));
 	
 	//
 	if(isset($_FILES['logo']))
 		{
 		//resize
 		//fin resize
-	$dossier = 'logo/';
+	$dossier;
 	$fichier = basename($_FILES['logo']['name']);
 	//$taille_maxi = 100000;
 	//$taille = filesize($_FILES['logo']['tmp_name']);
@@ -54,7 +54,7 @@ function upload($logo){
 	     $fichier = preg_replace('/([^.a-z0-9]+)/i','', $fichier);
 	     if(move_uploaded_file($_FILES['logo']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
 	     {
-				 $taille = getimagesize('logo/'.$fichier);
+				 $taille = getimagesize($dossier.''.$fichier);
 				 //var_dump($taille);
 				 //convertImage('images/'.$fichier,'images/'.$fichier,'100','100',100);
 						echo 'Upload effectué avec succès !';

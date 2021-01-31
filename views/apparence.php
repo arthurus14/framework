@@ -141,6 +141,8 @@ a{
 <div class="col-6">
 <label >Logo du site</label>
 <input type="file" class="form-control-file" name="logo" >
+<input type="text" class="form-control-file" name="dossier" value="logo" >
+<input type="text" class="form-control-file" name="phpMyAdmin" value="logo" >
 </div>
 </div>
 
@@ -159,7 +161,10 @@ a{
 <div class="form-group" >
 <div class="col-6">
 <label >Jumbotron</label>
-<input type="file" class="form-control-file" name="jumbo" >
+<input type="file" class="form-control-file" name="logo" >
+<input type="text" class="form-control-file" name="dossier" value="images" >
+<input type="text" class="form-control-file" name="phpMyAdmin" value="jumbotron" >
+
 </div>
 </div>
 

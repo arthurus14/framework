@@ -11,7 +11,7 @@ if(isset($_POST['h1Color'])&&isset($_POST['h1Police'])&&isset($_POST['h2Color'])
 
 
 if(isset($_FILES['logo']['name'])){
-    upload($_FILES['logo']['name']);
+    upload($_FILES['logo']['name'],$_POST['dossier'],$_POST['phpMyAdmin']);
 }
 include('views/apparence.php');
 
