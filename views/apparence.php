@@ -162,7 +162,7 @@ a{
 <div class="col-6">
 <label >Jumbotron</label>
 <input type="file" class="form-control-file" name="logo" >
-<input type="text" class="form-control-file" name="dossier" value="images" >
+<input type="text" class="form-control-file" name="dossier" value="jumbotron" >
 <input type="text" class="form-control-file" name="phpMyAdmin" value="jumbotron" >
 
 </div>

@@ -52,9 +52,9 @@ function upload($logo,$dossier,$phpMyAdmin){
 	          'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ',
 	          'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
 	     $fichier = preg_replace('/([^.a-z0-9]+)/i','', $fichier);
-	     if(move_uploaded_file($_FILES['logo']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+	     if(move_uploaded_file($_FILES['logo']['tmp_name'], './'.$dossier.'/' . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
 	     {
-				 $taille = getimagesize($dossier.''.$fichier);
+				 //$taille = getimagesize('./'.$dossier.'/'.''.$fichier);
 				 //var_dump($taille);
 				 //convertImage('images/'.$fichier,'images/'.$fichier,'100','100',100);
 						echo 'Upload effectué avec succès !';
