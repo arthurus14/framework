@@ -1,13 +1,16 @@
 <?php
 header("Content-type: text/css; charset: UTF-8");
+include('../models/css.php');
 $couleur = 'orange';
 
 ?>
 
 <?php
 
+global $orange;
+
 $color = "red";
-$bgColor = "orange";
+$bgColor = $orange;
 $font = "porter";
 
 ?>

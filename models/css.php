@@ -1,4 +1,10 @@
 <?php
+
+
+$orange = "orange";
+
+//attribuer les valeurs de la bdd à des variables globales
+
 function ReadCss(){
   global $bdd; //connection bdd depuis les codes d'une autre page
 
