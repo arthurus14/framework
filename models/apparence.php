@@ -17,6 +17,22 @@ function apparencePolice($h1Color,$h1Police,$h2Color,$h2Police){
 	$comment = $bdd->prepare("UPDATE apparence SET h1Color = '$h1Color',h1Police = '$h1Police',h2Color = '$h2Color',h2Police = '$h2Police' WHERE id = 15 ");
 	$comment->execute();
 
+	$monfichier = fopen('./css/style.php', 'r+');
+ 
+	//$pages_vues = fgets($monfichier); // On lit la première ligne (nombre de pages vues)
+	//$pages_vues += 1; // On augmente de 1 ce nombre de pages vues
+	fseek($monfichier,55,SEEK_SET); // On remet le curseur au début du fichier
+	$var = "\r\n"."\$couleur = 'orange';"."\n";
+	fwrite($monfichier, $var); // On écrit le nouveau nombre de pages vues
+	
+
+	
+
+	fclose($monfichier);
+ 
+
+
+
 	global $serveur;
 	$serveur = http_response_code();;
 	return $serveur;

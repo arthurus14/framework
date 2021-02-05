@@ -1,21 +1,27 @@
 <?php
-    header("Content-type: text/css; charset: UTF-8");
+header("Content-type: text/css; charset: UTF-8");
+$couleur = 'orange';
 
-   $color = "red";
-   $bgColor = "orange";
-   $font = "porter";
-
-
-   
 ?>
 
+<?php
+
+$color = "red";
+$bgColor = "orange";
+$font = "porter";
+
+?>
+<style>
 @font-face {
  font-family: "porter";
  src: url("../fonts/porter.woff") format("woff");
 }
 
+
+
+
 #gestion{
-  color: <?php echo $color; ?>;
+  color: <?php echo $color; ?> ;
 }
 
 body{
@@ -38,3 +44,4 @@ h1{
     margin-top:12%;
     margin-left:25%;
 }
+</style>

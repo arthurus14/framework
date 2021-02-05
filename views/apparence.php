@@ -259,7 +259,10 @@ a{
   
 </div>
 
+<?php
 
+
+?>
 
 </body>
     <!--autres cards -->
