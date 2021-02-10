@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 
 
 try {
+	
 	$bdd = new PDO('mysql:host=localhost;dbname=creaweb','root','root');
 	//$bdd = new PDO('mysql:host=localhost:3307;dbname=cdf','root','CaenNormandie14');
 } catch (PDOException $e) {

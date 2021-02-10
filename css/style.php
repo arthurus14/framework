@@ -1,16 +1,25 @@
 <?php
 header("Content-type: text/css; charset: UTF-8");
 include('../models/css.php');
-$couleur = 'orange';
+
+
 
 ?>
 
 <?php
 
-global $orange;
 
-$color = "red";
-$bgColor = $orange;
+global $color;
+global $headerColor;
+global $footerColor;
+global $h1Color;
+global $h2Color;
+global $h1Police;
+global $h2Police;
+
+
+//$color = "red";
+$bgColor = $color;
 $font = "porter";
 
 ?>
@@ -24,7 +33,7 @@ $font = "porter";
 
 
 #gestion{
-  color: <?php echo $color; ?> ;
+  color: <?php echo $h1Color; ?> ;
 }
 
 body{
@@ -32,12 +41,13 @@ body{
 }
 h1{
     font-family: <?php echo $font; ?>;
+    color : <?php echo $h1Color; ?>;
 }
 #include{
     background-color: red;
 }
 .footer{
-    background-color:white;
+    background-color: <?php echo $footerColor; ?>;
     margin-top:10%;
 }
 #mapid{ 

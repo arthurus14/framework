@@ -34,7 +34,7 @@
 
   <div class="col-sm-4">
     <div class="card">
-      <img src="<?php echo "images/".$n['images'] ?>"  alt="Responsive image" class="card-img-top" alt="...">
+      <img src="<?php echo $n['imageArticle'] ?>"  alt="Responsive image" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title"><?php echo $n['titre'] ?></h5>
         <?php  $date = new DateTime($n['dates']); ?>
@@ -105,7 +105,7 @@
 
 
   <div class="modal-body">
-      <img src="<?php echo "images/".$n['images'] ?>" class="card-img-top" alt="...">
+      <img src="<?php echo $n['imageArticle']  ?>" class="card-img-top" alt="...">
     <?php echo $n['texte']; ?>
 
     <?php  $date = new DateTime($n['dates']); ?>

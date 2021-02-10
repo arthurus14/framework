@@ -98,30 +98,32 @@ a{
  
     <form id="nomDuSite" action="" method="POST" class="col">
 
+    <?php  foreach($css as $n){?>
+
 <div class="form-group">
 <div class="col-6">
-<input class="form-control" type="text" name="websiteName" placeholder="Nom du site" id="example-text-input">
+<input class="form-control" type="text" name="websiteName" value="<?php echo $n['titreSite']; ?>" id="example-text-input">
 </div>
 </div>
 
 <div class="form-group">
 <label for="example-color-input" class="col-12 col-form-label">Couleur de fond en tête</label>
 <div class="col-6">
-<input class="form-control" type="color" name="headerColor" value="#563d7c" id="example-color-input">
+<input class="form-control" type="color" name="headerColor" value="<?php echo $n['headerColor']; ?>" id="example-color-input">
 </div>
 </div>
 
 <div class="form-group">
 <label for="example-color-input" class="col-12 col-form-label">Couleur de fond body</label>
 <div class="col-6">
-<input class="form-control" type="color" name="bgColor" value="#563d7c" id="example-color-input">
+<input class="form-control" type="color" name="bgColor" value="<?php echo $n['bgColor']; ?>" id="example-color-input">
 </div>
 </div>
 
 <div class="form-group">
 <label for="example-color-input" class="col-12 col-form-label">Couleur de fond pied de page</label>
 <div class="col-6">
-<input class="form-control" type="color" name="footerColor" value="#563d7c" id="example-color-input">
+<input class="form-control" type="color" name="footerColor" value="<?php echo $n['footerColor']; ?>" id="example-color-input">
 </div>
 </div>
 
@@ -130,6 +132,7 @@ a{
     <button type="submit" class="btn btn-primary">Enregistrer</button>
   </div>
 </div>
+
 </form>
 
 
@@ -197,20 +200,22 @@ a{
     <div class="col">
     
     <form id="charactere" action="" method="POST" class="col">
-
+   
 
 <div class="form-group">
+
 <label for="example-color-input" class="col-12 col-form-label">Couleur H1</label>
 <div class="col-6">
-<input class="form-control" type="color" name="h1Color" value="#563d7c" id="example-color-input">
+
+<input class="form-control" type="color" name="h1Color" value="<?php echo $n['h1Color']; ?>" id="example-color-input">
 </div>
 </div>
 
 <div class="form-group">
 <label for="example-color-input" class="col-12 col-form-label">Police H1</label>
 <div class="col-6">
-<select class="form-select" name="h1Police" aria-label="Default select example">
-  <option selected>Open this select menu</option>
+<select class="form-select" name="h1Police" aria-label="<?php echo $n['h1Police']; ?>">
+  <option selected><?php echo $n['h1Police']; ?></option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
@@ -223,15 +228,15 @@ a{
 <div class="form-group">
 <label for="example-color-input" class="col-12 col-form-label">Couleur H2</label>
 <div class="col-6">
-<input class="form-control" type="color" name="h2Color" value="#563d7c" id="example-color-input">
+<input class="form-control" type="color" name="h2Color" value="<?php echo $n['h2Color']; ?>" id="example-color-input">
 </div>
 </div>
 
 <div class="form-group">
 <label for="example-color-input" class="col-12 col-form-label">Police H2</label>
 <div class="col-6">
-<select class="form-select" name="h2Police" aria-label="Default select example">
-  <option selected>Open this select menu</option>
+<select class="form-select" name="h2Police" aria-label="<?php echo $n['h2Police']; ?>">
+  <option selected><?php echo $n['h2Police']; ?></option>
   <option value="1">One</option>
   <option value="2">Two</option>
   <option value="3">Three</option>
@@ -239,13 +244,14 @@ a{
 </div>
 </div>
 
-
+<?php } ?>
 
 <div class="form-group">
   <div class="col-6">
     <button type="submit" class="btn btn-primary">Enregistrer</button>
   </div>
 </div>
+
 </form>
     </div>
     <div class="col">
