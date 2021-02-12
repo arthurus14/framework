@@ -11,7 +11,13 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-  <title>CDF</title>
+  <title>
+    <?php
+  foreach($titre as $siteName){
+        echo $siteName['titreSite'];
+      }
+    ?>
+  </title>
 </head>
 
 <body>
@@ -23,6 +29,8 @@
 <!-- image de présentation  -->
       <img src="images/Saint-aubin-sur-mer-calvados.jpg" class="img-fluid" alt="Responsive image">
      
+
+
     </div>
 
    
@@ -30,6 +38,7 @@
 
 <!-- affiche les articles  -->
 <div class="row mt-3" id="pastEvents">
+
   <?php foreach ($article as $n) { ?>
 
   <div class="col-sm-4">

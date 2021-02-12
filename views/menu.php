@@ -1,5 +1,17 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <ul><img class="imgFb" src="images/cdf.jpg" alt="logo cdf">mon entreprise</ul>
+    <ul><img class="imgFb" src="<?php
+          foreach($logo as $siteLogo){
+
+            if($siteLogo['nom'] == "site"){
+            echo $siteLogo['lien'];
+            }
+          }
+        ?>" alt="logo site"><?php
+          foreach($titre as $siteName){
+            echo $siteName['titreSite'];
+          }
+        ?>
+    </ul>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

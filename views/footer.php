@@ -24,10 +24,24 @@
     <h5 class="text-uppercase">contact</h5>
       <?php foreach ($coords as $n) {
         ?>
-      <a href="<?php echo $n['fb']?>" target="_blank"><img class="imgFb" src="images/fb.png" alt="logo facebook"></a>
+      <a href="<?php echo $n['fb']?>" target="_blank"><img class="imgFb" src="<?php
+          foreach($logo as $siteLogo){
+
+            if($siteLogo['nom'] == "fb"){
+            echo $siteLogo['lien'];
+            }
+          }
+        ?>" alt="logo facebook"></a>
 
 
-      <a href="mailto:<?php echo $n['mail']?>?Subject=Contact" target="_top"><img class="imgFb" src="images/mail.png" alt="logo mail"></a>
+      <a href="mailto:<?php echo $n['mail']?>?Subject=Contact" target="_top"><img class="imgFb" src="<?php
+          foreach($logo as $siteLogo){
+
+            if($siteLogo['nom'] == "mail"){
+            echo $siteLogo['lien'];
+            }
+          }
+        ?>" alt="logo mail"></a>
 
     </div>
     <!-- Grid column -->

@@ -73,6 +73,36 @@ function afficher_articles_a_venir(){
 	return $soon;
 
 }
+
+function getTitle(){
+	global $bdd; //connection bdd depuis les codes d'une autre page
+
+	$titre = array();
+
+	$req = $bdd->query('SELECT * FROM apparence');
+
+	while($data = $req->fetch())
+	{
+		$titre[] = $data;
+	}
+	return $titre;
+
+}
+
+function getLogo(){
+	global $bdd; //connection bdd depuis les codes d'une autre page
+
+	$logo = array();
+
+	$req = $bdd->query('SELECT * FROM logo');
+
+	while($data = $req->fetch())
+	{
+		$logo[] = $data;
+	}
+	return $logo;
+
+}
 function connexion(){
 	global $bdd;
 

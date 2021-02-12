@@ -80,7 +80,7 @@
             <th scope="row"></th>
             <td><?php echo $n['titre'] ?></td>
             <td><?php echo substr($n['texte'], 0, 20) ?></td>
-            <td><img src="<?php echo "images/".$n['images'] ?>"style="width:20%; height:auto"></td>
+            <td><img src="<?php echo $n['imageArticle'] ?>"style="width:20%; height:auto"></td>
             <?php  $date = new DateTime($n['dates']); ?>
             <td><?php echo $date->format('d-m-Y'); ?></td>
             <td><?php echo $n['auteur'] ?></td>

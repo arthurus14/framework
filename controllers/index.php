@@ -16,6 +16,9 @@ $AllPastArti = AllPastArticles();
 if(isset($_GET['prochainsEvenements'])){
 $futureEvents = futureEvents();
 }
+
+$titre = getTitle();
+$logo = getLogo();
 connexion();
 
 include('views/index.php');
